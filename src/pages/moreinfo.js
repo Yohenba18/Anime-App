@@ -1,6 +1,6 @@
 import React from 'react'
 
-function moreinfo() {
+function Moreinfo() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function moreinfo() {
     )
 }
 
-export default moreinfo
+export default Moreinfo

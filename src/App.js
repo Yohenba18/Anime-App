@@ -1,10 +1,12 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import Welcome from './pages/welcome';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>anime database</h1>
+      <Welcome/>
     </div>
   );
 }

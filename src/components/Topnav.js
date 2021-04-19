@@ -1,11 +1,11 @@
 import React from 'react'
 
-function nav() {
+function Topnav() {
     return (
         <div>
-            
+            <h1>this is me</h1>
         </div>
     )
 }
 
-export default nav
+export default Topnav
