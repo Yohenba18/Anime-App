@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './TopNav.css';
 
 function Topnav() {
     return (
-        <div>
-            <h1>this is me</h1>
+        <div className="topnav">
+                <h1>Weeb Zone</h1>
         </div>
     )
 }
