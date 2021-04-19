@@ -74,7 +74,7 @@ export default function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Anime.."
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,

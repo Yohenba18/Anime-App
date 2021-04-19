@@ -1,12 +1,9 @@
-import React from 'react'
-import Topnav from '../components/Topnav'
-
+import React from 'react';
 
 function Welcome() {
     return (
         <div>
-        <Topnav/>
-            <h1>this is welcome page</h1>
+            <h1>WEEB ZONE</h1>
         </div>
     )
 }
