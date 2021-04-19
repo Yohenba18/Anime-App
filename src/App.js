@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import Welcome from "./pages/welcome";
 import Result from "./pages/result";
 import Moreinfo from "./pages/moreinfo";
@@ -20,6 +20,7 @@ function App() {
           <Route path="/MoreInfo" exact>
             <Moreinfo />
           </Route>
+          <Redirect to="/"/>
         </Switch>
       </main>
     </Router>
