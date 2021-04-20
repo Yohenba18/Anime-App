@@ -8,43 +8,44 @@ const Welcome = () => {
   const search = useContext(SearchContext);
   const [input, setInput] = useState("");
 
-  useEffect(() => {
-    search.search("Naruto").then((data) => console.log(data));
-  }, [search]);
-
+  const handleSearch = (event) => {
+    event.preventDefault();
+    search.search(input).then((data) => console.log(data));
+  };
   return (
-    <div className="welcome">
-      <div className="welcome__elements">
-        <h1>WEEB ZONE</h1>
         <Grid
+        className="welcome"
           container
           direction="column"
           justify="center"
           alignContent="center"
           alignItem="center"
         >
+        <h1>WEEB ZONE</h1>
           <Grid item>
-            <form>
-              <FormControl type="submit">
-                <Input
-                  placeholder="Anime search...."
-                  value={input}
-                  onClick={}
-                />
-                <IconButton
+            <form className="search">
+              <FormControl type="submit" className="search__control" >
+              <IconButton
                   varient="contained"
                   type="submit"
+                  className="search__inputButton"
                   disable={!input}
                   onClick={handleSearch}
                 >
                   <SearchIcon />
                 </IconButton>
+                <Input
+                  placeholder="Anime search...."
+                  value={input}
+                  className="search__input"
+                  onChange={(event) => setInput(event.target.value)}
+                />
+
               </FormControl>
             </form>
           </Grid>
         </Grid>
-      </div>
-    </div>
+
   );
 };
 
