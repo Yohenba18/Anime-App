@@ -3,23 +3,23 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect,
 } from "react-router-dom";
 import Welcome from "./pages/welcome";
 import Result from "./pages/result";
 import Moreinfo from "./pages/moreinfo";
 import Topnav from "./components/Topnav";
+import {SearchContext} from "./context/search";
 
 function App() {
   const [animeData, setAnimeData] = useState([]);
-  const [singleDate, setSingleData] = useState({});
+  const [singleData, setSingleData] = useState({});
 
   const setData = (data) => {
     setAnimeData(data);
   };
   const setSingle = (data) => {
-    setSingle(data);
+    setSingleData(data);
   };
 
   const search = (searchTerm) => {
@@ -28,6 +28,7 @@ function App() {
     ).then(resp => resp.json())
   };
   return (
+    <SearchContext.Provider value={{search, singleData,animeData, setData, setSingle}}>
     <Router>
       <Topnav />
       <main>
@@ -45,6 +46,7 @@ function App() {
         </Switch>
       </main>
     </Router>
+    </SearchContext.Provider>
   );
 }
 
