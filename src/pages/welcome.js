@@ -1,9 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { SearchContext } from "../context/search";
 import "./welcome.scss";
 
-function Welcome() {
+const Welcome = () => {
   const search = useContext(SearchContext);
+
+  useEffect(() => {
+    search.search("Naruto").then((data) => console.log(data));
+  }, [search]);
 
   return (
     <div className="welcome">
@@ -12,6 +16,6 @@ function Welcome() {
       </div>
     </div>
   );
-}
+};
 
 export default Welcome;
