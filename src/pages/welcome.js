@@ -52,8 +52,9 @@ function Welcome() {
   const classes = useStyles();
   return (
     <div className="welcome">
+    <div className="welcome__elements">
       <h1>WEEB ZONE</h1>
-      <div className={classes.search}>
+      {/* <div className={classes.search}>
         <div className={classes.searchIcon}>
           <SearchIcon />
         </div>
@@ -66,8 +67,9 @@ function Welcome() {
           inputProps={{ "aria-label": "search" }}
           id="#outlined-basic"
         />
-        
-      </div>
+      </div>*/}
+    </div>
+      
     </div>
   );
 }
