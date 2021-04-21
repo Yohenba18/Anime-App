@@ -8,7 +8,7 @@ import SearchIcon from "@material-ui/icons/Search";
 const Welcome = () => {
   const history = useHistory();
   const search = useContext(SearchContext);
-  const [input, setInput] = useState("");
+  const [input, setInput] = useState('');
 
   const handleSearch = (event) => {
     event.preventDefault();
@@ -18,6 +18,7 @@ const Welcome = () => {
       history.push('/Result');
     });
   };
+
   return (
     <Grid
       className="welcome"
