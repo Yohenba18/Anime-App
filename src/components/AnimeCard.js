@@ -1,6 +1,6 @@
 import React from 'react'
 
-function AnimeCrd() {
+function AnimeCard() {
     return (
         <div>
             anime card
@@ -8,4 +8,4 @@ function AnimeCrd() {
     )
 }
 
-export default AnimeCrd
+export default AnimeCard
