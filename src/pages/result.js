@@ -10,13 +10,12 @@ const Result = () => {
         if(search.animeData === undefined || search.animeData.length === 0) {
             try{
                 search.setData(JSON.parse(localStorage.getItem('myData')))
-                
                 setDataExists(true);
             }catch(err){
                 console.log(err);
                 setDataExists(false);
             }
-            console.log(search.animeData);
+        console.log(search.animeData);
         }
     },[search])
     return (
