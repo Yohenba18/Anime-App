@@ -1,4 +1,5 @@
 import React, { useEffect, useContext, useState } from "react";
+import AnimeList from "../components/AnimeList";
 import { SearchContext } from "../context/search";
 
 const Result = () => {
@@ -18,7 +19,7 @@ const Result = () => {
     }
   }, [search]);
 
-  return <div>{(dataExists && "Data Exists") || "data does not exists"}</div>;
+  return <div>{(dataExists && <AnimeList/>) || "data does not exists"}</div>;
 };
 
 export default Result;
