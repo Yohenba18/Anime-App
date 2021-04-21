@@ -16,7 +16,7 @@ const Result = () => {
                 console.log(err);
                 setDataExists(false);
             }
-            console.log(search.animeData);
+            
         }
     },[search])
     return (
