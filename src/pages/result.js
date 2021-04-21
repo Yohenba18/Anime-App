@@ -4,12 +4,12 @@ import { SearchContext } from "../context/search";
 
 const Result = () => {
     const search = useContext(SearchContext);
-    const [dataExists, setDataExists] = useState(true)
+    const [dataExists, setDataExists] = useState(false);
 
     useEffect(()=> {
         if(search.animeData === undefined || search.animeData.length === 0) {
             try{
-                search.setData(JSON.parse(localStorage.getItem('myData')))
+                search.setData(JSON.parse(localStorage.getItem('myData')));
                 setDataExists(true);
             }catch(err){
                 console.log(err);
