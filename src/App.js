@@ -18,6 +18,7 @@ function App() {
   const setData = (data) => {
     setAnimeData(data);
   };
+
   const setSingle = (data) => {
     setSingleData(data);
   };
@@ -25,7 +26,7 @@ function App() {
   const search = (searchTerm) => {
     return fetch(
       `https://api.jikan.moe/v3/search/anime?q=${searchTerm}&limit=20`
-    ).then(resp => resp.json())
+    ).then((response) => response.json());
   };
   return (
     <SearchContext.Provider value={{search, singleData,animeData, setData, setSingle}}>

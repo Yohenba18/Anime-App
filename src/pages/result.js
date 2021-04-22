@@ -16,14 +16,13 @@ const Results = () => {
         console.log(error);
         setDataExists(false);
       }
-      console.log(search.animeData)
     }
   }, [search]);
 
   return (
     <Box mt={2}>
-      {(dataExists && <AnimeList  />) || (
-        <Typography varient="h4">No Data Exists</Typography>
+      {(dataExists && <AnimeList data={search.animeData} />) || (
+        <Typography>No Data Exists</Typography>
       )}
     </Box>
   );

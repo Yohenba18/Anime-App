@@ -1,10 +1,9 @@
-import  { createContext } from 'react'
+import { createContext } from 'react';
 
 export const SearchContext = createContext({
-    animeData: [],
-    singleData: {},
-    search: ()=>{},
-    setData: ()=> {} ,
-    setSingle: () => {}
-})
-
+  animeData: [],
+  singleData: {},
+  search: () => {},
+  setData: () => {},
+  setSingle: () => {},
+});
