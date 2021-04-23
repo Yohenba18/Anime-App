@@ -14,7 +14,7 @@ function SingleAnime(props) {
 
   useEffect(() => {
     console.log(title, image_url);
-  }, [props.info]);
+  }, [title, image_url]);
 
   return (
     <Grid
@@ -25,8 +25,12 @@ function SingleAnime(props) {
       alignItems="center"
       alignContent="center"
     >
+    <Grid item>
+        <img src={image_url} alt={title} className="singleanime__image" />
+      </Grid>
+      <Grid item>
       <Paper elevation={3}>
-        <Typography variant="h4" component="h2">
+        <Typography variant="h5" component="h2">
           {title}
         </Typography>
         <Typography variant="h5" component="h2">
@@ -41,7 +45,12 @@ function SingleAnime(props) {
         <Typography variant="h5" component="h2">
           Rating: {rating}
         </Typography>
+        <Link componet="button" variant="body1" href={url}>
+          For more
+        </Link>
       </Paper>
+      </Grid>
+      
     </Grid>
   );
 }
