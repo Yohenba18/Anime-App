@@ -22,7 +22,7 @@ function Moreinfo() {
     },[search])
     return (
         <div>
-            {(dataExist && <SingleAnime/>) || (<Typography>Nope</Typography>)}
+            {(dataExist && <SingleAnime info={search.singleData}/>) || (<Typography varient="h4" component="h2">Nope</Typography>)}
         </div>
     )
 }
