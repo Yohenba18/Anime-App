@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Grid, Typography, Paper, Link } from "@material-ui/core";
+import './SingleAnime.scss'
 
 function SingleAnime(props) {
   const {
@@ -24,12 +25,13 @@ function SingleAnime(props) {
       direction="row"
       alignItems="center"
       alignContent="center"
+      className="singleanime__container"
     >
     <Grid item>
         <img src={image_url} alt={title} className="singleanime__image" />
       </Grid>
       <Grid item>
-      <Paper elevation={3}>
+      <Paper elevation={3} className="singleanime__description">
         <Typography variant="h5" component="h2">
           {title}
         </Typography>
