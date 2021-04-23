@@ -1,16 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SearchContext } from "../context/search";
 import { Grid, Typography, List, Paper, GridListTile } from "@material-ui/core";
 
 function AnimeCard(props) {
-  const title = props.anime.title.length;
-  const imageUrl = props.anime.imageUrl;
-  const synopsis = props.anime.synopsis;
+  const search = useContext(SearchContext);
+
+  const title =
+    props.anime.title.length > 20
+      ? `${props.anime.title.substring(0, 15)}...`
+      : props.anime.title;
+  const imageUrl = props.anime.image_url;
+  const synopsis =
+    props.anime.synopsis.length > 20
+      ? `${props.anime.synopsis.substring(0, 15)}...`
+      : props.anime.synopsis;
   return (
-    <GridListTile>
+    <GridListTile className="animeCard__container">
       <Grid container item xs={12}>
-        <Paper >
-        <img src={imageUrl} alt={title} style={{ maxHeight: 300 }} />
+        <Paper elevation={3} className="anime__paper">
+          <img src={imageUrl} alt={title} style={{ Height: 300 }} />
+          <Typography varient="h5" component="h2">
+            {title}
+          </Typography>
+          <Typography varient="boby2" component="h2" paragraph={true}>
+            {synopsis}
+          </Typography>
         </Paper>
       </Grid>
     </GridListTile>
