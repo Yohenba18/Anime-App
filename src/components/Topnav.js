@@ -68,7 +68,8 @@ export default function SearchAppBar() {
   const [input,setInput] = useState(true);
 
   useEffect(() => {
-    history
+    
+    history.push('//Result')
   })
 
 
@@ -90,6 +91,8 @@ export default function SearchAppBar() {
                 input: classes.inputInput,
               }}
               inputProps={{ 'aria-label': 'search' }}
+              value={input}
+              onChange={(e) => {setInput(e.target.value)}}
             />
           </div>
         </Toolbar>
