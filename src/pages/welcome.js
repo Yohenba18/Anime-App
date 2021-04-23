@@ -43,7 +43,7 @@ const Welcome = () => {
               <SearchIcon />
             </IconButton>
             <Input
-            placeholder="Search for you favorite anime..."
+            placeholder="Anime Search..."
             value={input}
             onChange={(event) => setInput(event.target.value)}
               className="search__input"

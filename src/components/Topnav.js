@@ -67,7 +67,7 @@ export default function SearchAppBar() {
       <AppBar position="static" id="appbar">
         <Toolbar>
           <Typography className={classes.title} variant="h4" noWrap id="title">
-            WEEB ZONE
+            <a href="../pages/welcome.js">WEEB ZONE</a>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>

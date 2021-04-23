@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
+import SingleAnime from '../components/SingleAnime';
 import { SearchContext } from '../context/search';
+import {  Typography } from '@material-ui/core';
 
 function Moreinfo() {
 
@@ -9,7 +11,7 @@ function Moreinfo() {
     useEffect(() => {
         if(search.singleData === undefined ||  Object.keys(search.singleData).length === 0){
             try{
-                search.setSingle(JSON.parae(localStorage.getItem('singleData')))
+                search.setSingle(JSON.parse(localStorage.getItem('singleData')))
                 setDataExist(true);
             }catch(e){
                 console.log(e);
@@ -20,7 +22,7 @@ function Moreinfo() {
     },[search])
     return (
         <div>
-            {dataExist ? (<h1>More Info</h1>) : (<h1>nope</h1>)}
+            {(dataExist && <SingleAnime/>) || (<Typography>Nope</Typography>)}
         </div>
     )
 }
