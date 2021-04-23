@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import {Grid,Typography,Paper,Link } from '@material-ui/core';
 
 function SingleAnime(props) {
   const {
