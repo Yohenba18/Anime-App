@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import {Grid,Typography,Paper,Link } from '@material-ui/core';
+import { Grid, Typography, Paper, Link } from "@material-ui/core";
 
 function SingleAnime(props) {
   const {
@@ -13,13 +13,36 @@ function SingleAnime(props) {
   } = props.info;
 
   useEffect(() => {
-      console.log(title,image_url);
-  },[props])
+    console.log(title, image_url);
+  }, [props.info]);
 
   return (
-    <div>
-      <h1>imma god</h1>
-    </div>
+    <Grid
+      container
+      spacing={10}
+      justify="center"
+      direction="row"
+      alignItems="center"
+      alignContent="center"
+    >
+      <Paper elevation={3}>
+        <Typography variant="h4" component="h2">
+          {title}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Airing: {airing}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Score: {score}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Broadcast: {broadcast}
+        </Typography>
+        <Typography variant="h5" component="h2">
+          Rating: {rating}
+        </Typography>
+      </Paper>
+    </Grid>
   );
 }
 
