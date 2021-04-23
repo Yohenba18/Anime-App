@@ -5,7 +5,7 @@ import "./AnimeCard.scss";
 import { useHistory } from "react-router";
 
 function AnimeCard(props) {
-  const history = useHistory;
+  const history = useHistory();
   const search = useContext(SearchContext);
   const onClickHandeler = () => {
     fetch(`https://api.jikan.moe/v3/anime/${props.anime.mal_id}`)
