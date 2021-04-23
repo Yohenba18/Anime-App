@@ -14,6 +14,7 @@ const Welcome = () => {
     event.preventDefault();
     search.search(input).then((data) => {
       search.setData(data.results);
+      console.log(data.results);
       localStorage.setItem("myData", JSON.stringify(data.results));
       history.push("/Result");
     });

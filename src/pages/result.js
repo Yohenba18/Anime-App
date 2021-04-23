@@ -22,7 +22,7 @@ const Results = () => {
   return (
     <Box mt={2}>
       {(dataExists && <AnimeList data={search.animeData} />) || (
-        <Typography>No Data Exists</Typography>
+        <Typography varient="h4">No Data Exists</Typography>
       )}
     </Box>
   );
