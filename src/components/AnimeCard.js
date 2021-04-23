@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { SearchContext } from "../context/search";
 import { Grid, Typography, List, Paper, GridListTile } from "@material-ui/core";
+import './AnimeCard.scss';
 
 function AnimeCard(props) {
   const search = useContext(SearchContext);
