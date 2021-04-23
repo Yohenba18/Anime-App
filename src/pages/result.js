@@ -20,7 +20,7 @@ const Results = () => {
   }, [search]);
 
   return (
-    <Box mt={2} justifyContent="center">
+    <Box m={2}>
       {(dataExists && <AnimeList data={search.animeData} />) || (
         <Typography varient="h4">No Data Exists</Typography>
       )}

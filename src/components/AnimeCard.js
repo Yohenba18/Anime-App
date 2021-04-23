@@ -18,12 +18,12 @@ function AnimeCard(props) {
   return (
     <GridListTile className="animeCard__container">
       <Grid container item xs={12}>
-        <Paper elevation={3} className="anime__paper">
+        <Paper elevation={3} className="animeCard__paper">
           <img src={imageUrl} alt={title} style={{ Height: 300 }} />
-          <Typography varient="h5" component="h2">
+          <Typography variant="h5" component="h2">
             {title}
           </Typography>
-          <Typography varient="boby2" component="h2" paragraph={true}>
+          <Typography variant="body2" component="h2" paragraph={true}>
             {synopsis}
           </Typography>
         </Paper>
