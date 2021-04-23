@@ -23,7 +23,7 @@ const Results = () => {
   return (
     <Box m={2} className="anime">
       {(dataExists && <AnimeList data={search.animeData} />) || (
-        <Typography varient="h4">No Data Exists</Typography>
+        <Typography varient="h2" style={{color: "white"}}>No Data Exists</Typography>
       )}
     </Box>
   );

@@ -65,17 +65,18 @@ export default function SearchAppBar() {
   const classes = useStyles();
   const history = useHistory();
   const search = useContext(SearchContext);
-  const [input, setInput] = useState(true);
+  const [input, setInput] = useState("");
 
   const handleSearch = (event) => {
     event.preventDefault();
-    search.search(input).then((data) => {
-      search.setData(data.resutls);
-      localStorage.setItem('myData',JSON.stringify(data.resutls));
-      setInput(' ');
-      history.push('/Result');
-    });
 
+    search.search(input).then((data) => {
+      search.setData(data.results);
+      console.log(data);
+      localStorage.setItem("myData", JSON.stringify(data.results));
+      setInput(" ");
+      history.push("/Result");
+    });
   };
 
   return (
