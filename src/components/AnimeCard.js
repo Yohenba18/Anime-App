@@ -12,7 +12,7 @@ function AnimeCard(props) {
       .then((response) => response.json())
       .then((data) => {
         search.setSingle(data);
-        localStorage.setItem("singleData", JSON.stringify(data));
+        localStorage.setItem("singleData", JSON.stringify(dataF);
         history.push("/MoreInfo");
       });
   };
