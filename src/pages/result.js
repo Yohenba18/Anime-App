@@ -2,6 +2,7 @@ import { Box, Typography } from '@material-ui/core';
 import React, { useContext, useEffect, useState } from 'react';
 import AnimeList from '../components/AnimeList';
 import { SearchContext } from '../context/search';
+import './result.scss';
 
 const Results = () => {
   const search = useContext(SearchContext);
@@ -20,7 +21,7 @@ const Results = () => {
   }, [search]);
 
   return (
-    <Box m={2}>
+    <Box m={2} className="anime">
       {(dataExists && <AnimeList data={search.animeData} />) || (
         <Typography varient="h4">No Data Exists</Typography>
       )}

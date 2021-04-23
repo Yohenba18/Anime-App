@@ -1,6 +1,6 @@
 .animeCard__container{
-    margin: 10px;
-}
+            margin:10px
+        }
 
 .animeCard__paper{
     display: flex;
@@ -11,7 +11,12 @@
 
 }
 
+.animeCard__paper > img {
+    max-height: 300px;
+}
+
 .animeCard__paper:hover {
     background-color: lightgray;
     opacity: 0.8;
   }
+
