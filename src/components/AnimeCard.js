@@ -1,19 +1,21 @@
 import React, { useContext } from "react";
 import { SearchContext } from "../context/search";
 import { Grid, Typography, Link, Paper, GridListTile } from "@material-ui/core";
-import './AnimeCard.scss';
+import "./AnimeCard.scss";
 import { useHistory } from "react-router";
 
 function AnimeCard(props) {
-    const history = useHistory;
+  const history = useHistory;
   const search = useContext(SearchContext);
   const onClickHandeler = () => {
-        fetch(`https://api.jikan.moe/v3/anime/${props.anime.mal_id}`)
-        .then(response => response.json())
-        .then((data) => {
+    fetch(`https://api.jikan.moe/v3/anime/${props.anime.mal_id}`)
+      .then((response) => response.json())
+      .then((data) => {
+        search.setSingle(data);
+        localStorage.setItem("singleData", JSON.stringify(data));
         history.push("/MoreInfo");
-        })
-  }
+      });
+  };
 
   const title =
     props.anime.title.length > 20
@@ -28,14 +30,21 @@ function AnimeCard(props) {
     <GridListTile className="animeCard__container">
       <Grid container item xs={12}>
         <Paper elevation={3} className="animeCard__paper">
-          <img src={imageUrl} alt={title}  />
+          <img src={imageUrl} alt={title} />
           <Typography variant="h5" component="h2">
             {title}
           </Typography>
           <Typography variant="body2" component="h2" paragraph={true}>
             {synopsis}
           </Typography>
-          <Link variant="body1" component="button" style={{marginBottom: 0}} onClick={onClickHandeler} >More Info</Link>
+          <Link
+            variant="body1"
+            component="button"
+            style={{ marginBottom: 0 }}
+            onClick={onClickHandeler}
+          >
+            More Info
+          </Link>
         </Paper>
       </Grid>
     </GridListTile>
