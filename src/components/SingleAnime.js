@@ -47,7 +47,7 @@ function SingleAnime(props) {
         <Typography variant="h5" component="h2">
           Rating: {rating}
         </Typography>
-        <Link componet="button" variant="body1" href={url}>
+        <Link componet="button" variant="h6" href={url}>
           For more
         </Link>
       </Paper>
