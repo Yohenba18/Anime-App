@@ -6,7 +6,7 @@ const AnimeList = (props) => {
   return (
     <GridList className="animelist__container">
       {props.data.map((anime) => (
-        <AnimeCard key={anime.mal_id} anime={anime} />
+        <AnimeCard anime={anime} />
       ))}
     </GridList>
   );
